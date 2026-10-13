@@ -1,0 +1,19 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/bordeaux", "destination": "/Roadmap_Omnes_2026_2027_talent_version_Bordeaux.pdf" },
+    { "source": "/lyon",     "destination": "/Roadmap_Omnes_2026_2027_talent_version_Lyons.pdf" },
+    { "source": "/chambery", "destination": "/Roadmap_Omnes_2026_2027_talent_version_Chambery.pdf" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    { "source": "/bordeaux", "headers": [ { "key": "Content-Disposition", "value": "inline; filename=\"Roadmap_Omnes_2026_2027_Bordeaux.pdf\"" } ] },
+    { "source": "/lyon",     "headers": [ { "key": "Content-Disposition", "value": "inline; filename=\"Roadmap_Omnes_2026_2027_Lyon.pdf\"" } ] },
+    { "source": "/chambery", "headers": [ { "key": "Content-Disposition", "value": "inline; filename=\"Roadmap_Omnes_2026_2027_Chambery.pdf\"" } ] }
+  ]
+}
